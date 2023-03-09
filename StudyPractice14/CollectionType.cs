@@ -76,29 +76,17 @@ namespace UP14
         {
             Array.Sort(this.collections, (x, y) => x.Count.CompareTo(y.Count));
         }
-
-        public void Print()
-        {
-            foreach (var i in collections)
-            {
-                foreach (var j in i)
-                {
-                    Console.Write($"{j}  ");
-                }
-                Console.WriteLine();
-            }
-        }
     }
     public static class DictionaryExtension
     {
         public static string ToString<T>(this Dictionary<int,T> dict)
         {
-            string result = "";
+            string result = "| ";
             foreach(var i in dict)
             {
-                result += i.Value.ToString()+"  ";
+                result += i.Value.ToString()+" ";
             }
-            return result;
+            return result+"|";
         }
     }
 }

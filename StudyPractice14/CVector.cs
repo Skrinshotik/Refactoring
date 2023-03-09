@@ -114,13 +114,10 @@ namespace UP14
         public string ToString()
         {
             string result = "";
-            int count = 0;
-            foreach (var i in vector)
+
+            foreach (var element in vector)
             {
-                if (count != size)
-                    result = result + $"{i}, ";
-                else
-                    result = result + $"{i}";
+                result += $"{element} ";
             }
             return result;
         }
